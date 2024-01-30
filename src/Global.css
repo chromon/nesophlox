@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root,
+body,
+html {
+  height: 100%;
+}
+
+.ant-layout {
+  display: flex !important;
+  width: 100% !important;
+  min-height: 100% !important;
+  background: #EEF2F6;
+}
+
+.ant-layout .ant-layout-sider-trigger {
+  color: black;
+  background-color: white;
+}
