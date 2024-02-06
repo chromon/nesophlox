@@ -13,7 +13,7 @@ const Default: React.FC = () => {
 
     return (
         <>
-            <Layout style={{ padding: '0 24px 24px' }}>
+            <Layout style={{ padding: '0 24px 24px'}}>
                 <Breadcrumb items={[{ title: 'DashBoard' }, { title: 'Default' }]} style={{ margin: '16px 0' }} />
                 <Content
                     style={{

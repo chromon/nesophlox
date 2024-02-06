@@ -77,7 +77,8 @@ const AdminSider: React.FC = () => {
 
     return (
         <>
-            <Sider width={260}  collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+            <Sider width={260}  collapsible collapsed={collapsed} 
+                onCollapse={(value) => setCollapsed(value)} theme='light'>
                 <Menu
                     mode="inline"
                     items={items}

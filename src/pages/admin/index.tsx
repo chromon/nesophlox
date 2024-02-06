@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout } from 'antd';
+import { ConfigProvider, Layout, theme } from 'antd';
 import { Outlet } from 'react-router-dom';
 import AdminHeader from '../../components/header';
 import AdminSider from '../../components/sider';
@@ -8,16 +8,24 @@ import AdminSider from '../../components/sider';
 const Admin: React.FC = () => {
 
     return (
-        <Layout>
-            {/* Header */}
-            <AdminHeader />
-            <Layout>
-                {/* 侧边栏 Sider */}
-                <AdminSider />
-                {/* 中心内容页子路由 Router*/}
-                <Outlet />
-            </Layout>
-        </Layout>
+        <>
+            <ConfigProvider
+                theme={{
+                    algorithm: theme.defaultAlgorithm
+                    // algorithm: theme.darkAlgorithm
+                }}>
+                <Layout>
+                    {/* Header */}
+                    <AdminHeader />
+                    <Layout>
+                        {/* 侧边栏 Sider */}
+                        <AdminSider />
+                        {/* 中心内容页子路由 Router*/}
+                        <Outlet />
+                    </Layout>
+                </Layout>
+            </ConfigProvider>
+        </>
     );
 };
 
